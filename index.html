@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>The Crunch</title>
+
+
+    <script src="index.js"></script>
+
+</head>
+
+<body>
+
+    <header class='header-container'>
+
+        <div class='logo'>
+
+            <img src="the_crunch_logo.png"">
+
+        </div>
+
+
+        <nav class='navigation'>
+
+            <a href='#Home' class='Home'>Home</a>
+            <a href='#Menu' class=" Menu">Menu</a>
+            <a href='#Location' class='Location'>Location</a>
+            <a href='#About' class='About'>About us</a>
+            <a href='#Contact' class='Contact'>Contact Us</a>
+            <button class="cart-icon-btn" onclick="toggleCart()">🛒 <span id="cart-count">0</span></button>
+
+
+            </nav>
+
+
+    </header>
+
+
+    <main class='main-container'>
+
+
+        <section class='first-section-container' id='Home'>
+
+
+
+            <h1 class='first-section-bio'>
+
+                One of the Leading Boneless Fried <br> Chicken
+                Brands in the Philippines Serving
+                Deliciousness at 200+ Branches Nationwide!
+
+            </h1>
+
+
+
+
+
+            <p class='first-section-second-bio'>
+
+
+                Once you go crunch, you'll crave for more bunch!
+
+
+            </p>
+
+
+
+
+        </section>
+
+
+        <section class="main-sliding-photo-container">
+
+
+            <figure class="slide-photo">
+
+
+                <img src="first.jpg" alt="slide1">
+                <img src="second.jpg" alt="slide2">
+                <img src="third.jpg" alt="slide3">
+                <img src="fourth.jpg" alt="slide4">
+                <img src="fifth.jpg" alt="slide5">
+                <img src="six.jpg" alt="slide6">
+                <img src="seven.jpg" alt="slide7">
+                <img src="walo.jpg" alt="slide8">
+
+
+                <img src="second.jpg" alt="slide2">
+                <img src="third.jpg" alt="slide3">
+                <img src="fourth.jpg" alt="slide4">
+                <img src="fifth (2).jpg" alt="slide5">
+                <img src="six.jpg" alt="slide6">
+                <img src="seven.jpg" alt="slide7">
+                <img src="walo.jpg" alt="slide8">
+
+            </figure>
+
+
+        </section>
+
+
+        <section class="menu-main-container" id="Menu">
+
+
+            <header class="menu-header">
+
+                Food Menu
+
+            </header>
+
+
+
+            <section class="menu-button">
+
+
+                <button onclick="showCategory('all-time')">All Time Favorites</button>
+                <button onclick="showCategory('rice-meal')">Rice Meals</button>
+                <button onclick="showCategory('sides')">Sides</button>
+                <button onclick="showCategory('drinks')">Drinks</button>
+                <button onclick="showCategory('signature-flavors')">Signature Flavors</button>
+
+
+            </section>
+
+
+
+            <section class="menu-items">
+
+
+
+                <div class="menu-card menu-card-all-time" data-name="1 PC. Chicken" data-price="79.00">
+
+
+                    <img src="1pc Chicken.avif" alt="1 PC Chicken">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>1 PC. Chicken</h4>
+                            <p>₱ 79.00 / 1pc</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-card menu-card-all-time" data-name="Chicken Shots (Ala Carte)" data-price="74.00">
+
+
+                    <img src="Chicken Shots.avif" alt="Chicken Shots">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>Chicken Shots</h4>
+                            <p>₱ 74.00 / 6pcs</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="menu-card menu-card-all-time" data-name="12pc Chicken Platter" data-price="450.00">
+
+
+                    <img src="12pc Chicken.avif" alt="12pc Chicken Platter">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>12pc Chicken Platter</h4>
+                            <p>12pcs / 4–6 pax</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+                <div class="menu-card menu-card-rice-meal" data-name="1pc Chicken Shots Rice Meal" data-price="74.00">
+
+                    <img src="1pc Chicken.avif" alt="Chicken Shot">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>1pc Chicken</h4>
+                            <p>₱ 74</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-card menu-card-rice-meal" data-name="2pc Chicken Rice Meal" data-price="129.00">
+
+
+                    <img src="2pc Chicken.avif" alt="2pc_chicken">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>2pc Chicken</h4>
+                            <p>₱ 129</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy</button>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="menu-card menu-card-rice-meal" data-name="3pc Chicken Shots Rice Meal" data-price="169.00">
+
+                    <img src="3pc Chicken.avif" alt="3pc_chicken">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>3pc Chicken Shots</h4>
+                            <p>₱ 169</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-card menu-card-rice-meal" data-name="Chicken Skin Rice Meal" data-price="60.00">
+
+                    <img src="Chicken Skin.avif" alt="chicken_skin">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>Chicken Skin</h4>
+                            <p>₱ 60</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="menu-card menu-card-rice-meal" data-name="Chicken Skin Rice Meal" data-price="60.00">
+
+                    <img src="Chicken Shots.avif" alt="chicken_skin">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>Chicken Shot</h4>
+                            <p>₱ 80</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+                <div class="menu-card menu-card-sides" data-name="Fish Cake" data-price="80.00">
+
+                    <img src="fish_cake.avif" alt="fish_cake">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>Fish Cake</h4>
+                            <p>₱ 80</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy Now</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-card menu-card-sides" data-name="Tteokbokki" data-price="80.00">
+
+                    <img src="tteokbokki.avif" alt="tteokbokki">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>Tteokbokki</h4>
+                            <p>₱ 80</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy Now</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-card menu-card-sides" data-name="Kimchi" data-price="30.00">
+
+                    <img src="kimchi.avif" alt="kimchi">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>Kimchi</h4>
+                            <p>₱ 30</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy Now</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-card menu-card-sides" data-name="Chicken Shot Bucket" data-price="160.00">
+
+                    <img src="chicken_shots_bucket.avif" alt="chicken_shots_bucket">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>Chicken Shot Bucket</h4>
+                            <p>₱ 160</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy Now</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="menu-card menu-card-sides" data-name="Flavored Chicken Skin Bucket" data-price="140.00">
+
+                    <img src="flavored_chicken_skin_buckets.avif" alt="flavored_chicken_skin_buckets">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>Flavored Chicken Skin Bucket</h4>
+                            <p>₱ 140</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy Now</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-card menu-card-sides" data-name="Classic Chicken Skin Bucket" data-price="120.00">
+
+                    <img src="classic_chicken_skin_bucket.avif" alt="classic_chicken_skin_bucket">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>Classic Chicken Skin Bucket</h4>
+                            <p>₱ 120</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy Now</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+                <div class="menu-card menu-card-drinks" data-name="Mango Drink (16oz)" data-price="39.00">
+
+                    <img src="mango.avif" alt="mango">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>Mango</h4>
+                            <p>₱ 39 (16oz) ₱ 49 (22 oz)</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy Now</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-card menu-card-drinks" data-name="Strawberry Drink (16oz)" data-price="39.00">
+
+                    <img src="strawberry.avif" alt="strawberry">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>Strawberry</h4>
+                            <p>₱ 39 (16oz) ₱ 49 (22 oz)</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy Now</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-card menu-card-drinks" data-name="Kiwi Drink (16oz)" data-price="39.00">
+
+                    <img src="kiwi.avif" alt="kiwi">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>Kiwi</h4>
+                            <p>₱ 39 (16oz) ₱ 49 (22 oz)</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy Now</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-card menu-card-drinks" data-name="Blueberry Drink (16oz)" data-price="39.00">
+
+                    <img src="blueberry.avif" alt="blueberry">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>Blueberry</h4>
+                            <p>₱ 39 (16oz) ₱ 49 (22 oz)</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy Now</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-card menu-card-drinks" data-name="Green Apple Drink (16oz)" data-price="39.00">
+
+                    <img src="greenapple.avif" alt="greenapple">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>Green Apple</h4>
+                            <p>₱ 39 (16oz) ₱ 49 (22 oz)</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy Now</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-card menu-card-drinks" data-name="Lychee Drink (16oz)" data-price="39.00">
+
+                    <img src="lychee.avif" alt="lychee">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>Lychee</h4>
+                            <p>₱ 39 (16oz) ₱ 49 (22 oz)</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy Now</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+
+                <div class="menu-card menu-card-signature-flavors" data-name="Honey Garlic Flavoring"
+                    data-price="10.00">
+
+                    <img src="honey_garlic.avif" alt="honey_garlic">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>Honey Garlic</h4>
+                            <p>₱ 10</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy Now</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="menu-card menu-card-signature-flavors" data-name="Teriyaki Flavoring" data-price="20.00">
+
+                    <img src="teriyaki.avif" alt="teriyaki">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>Teriyaki</h4>
+                            <p>₱ 20</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy Now</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="menu-card menu-card-signature-flavors" data-name="K-Style Flavoring" data-price="20.00">
+
+                    <img src="k_style.avif" alt="k_style">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>K- Style</h4>
+                            <p>₱ 20</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy Now</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="menu-card menu-card-signature-flavors" data-name="Texas BBQ Flavoring" data-price="25.00">
+
+                    <img src="texas_bbq.avif" alt="texas_bbq">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>Texas BBQ</h4>
+                            <p>₱ 25</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy Now</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="menu-card menu-card-signature-flavors" data-name="Garlic Parmesan Flavoring"
+                    data-price="25.00">
+
+                    <img src="garlic_parmesan.avif" alt="garlic_parmesan">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>Garlic Parmesan</h4>
+                            <p>₱ 25</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy Now</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="menu-card menu-card-signature-flavors" data-name="Spicy K-Style Flavoring"
+                    data-price="25.00">
+
+                    <img src="spicy_k_style.avif" alt="spicy_k_style">
+
+                    <div class="menu-box">
+
+
+                        <div>
+
+                            <h4>Spicy K- Style</h4>
+                            <p>₱ 25</p>
+
+                        </div>
+
+
+                        <button class="menu-buy" onclick="addToCart(this)">Buy Now</button>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+            </section>
+
+
+        </section>
+
+
+
+    </main>
+
+
+
+
+    <main class="location-section-container" id="Location">
+
+        <section class="location-section">
+            <h1 class="location-title">Our Location</h1>
+
+            <p class="location-address">
+                <strong>Address:</strong> Quezon Avenue (Near Quezon Capital Rural Bank),
+                Lucena City, 4301 Quezon Province, Philippines
+            </p>
+
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.7063333278684!2d121.61066607485942!3d13.940451686471329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd4bc228c79c95%3A0x2be30acf58b00eeb!2sThe%20Crunch%20-%20Lucena%20City!5e1!3m2!1sen!2sph!4v1763286080815!5m2!1sen!2sph"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+
+    <main class="about-us-container" id="About">
+
+
+        <section class="about-us">
+
+            <h1 class="about-us-h1">
+
+                About Us
+
+            </h1>
+
+            <p class="about-us-p">
+
+                The Crunch – Boneless Fried Chicken
+                A franchise business committed to providing a quality serving of flavored boneless fried chicken.
+
+
+                Founded by friends Ralph, Rapunzel, Joel & Kat, our goal is to share our unique style of tasty boneless
+                fried chicken.
+
+
+                We also offer Chicken Shots, Shots Bucket, Half Chicken (6 pcs/flavor), and Whole Chicken (12
+                pcs/flavor), available in different delicious flavors such as Classic, Honey Garlic, K-Style, Spicy
+                K-Style, Teriyaki, Cheesy Bacon, and Texas BBQ.
+
+
+                Treat yourself to this tasty and flavorful boneless chicken at any of our 50+ locations in the country!
+
+            </p>
+
+        </section>
+
+    </main>
+
+
+
+
+
+    <main class="contact-us-container" id="Contact">
+
+        <header class="contact-banner">
+
+            <div class="contact-banner-text">
+
+
+                <hgroup>
+
+                    <h1>Contact Us</h1>
+                    <p>Your Crunch cravings matter to us!</p>
+
+                </hgroup>
+
+
+            </div>
+
+
+        </header>
+
+
+
+
+
+        <section class="contact-us" aria-labelledby="contact-title">
+
+
+            <h2>The Crunch – Lucena City</h2>
+
+            <section class="social-section" aria-labelledby="social-title">
+
+
+
+
+
+                <nav class="social-links">
+
+
+                    <a href="https://www.facebook.com/TheCrunchPH" class="social fb">Facebook</a>
+                    <a href="https://www.tiktok.com/@thecrunchph" class="social tt">TikTok</a>
+                    <a href="https://www.instagram.com/thecrunchph/" class="social ig">Instagram</a>
+
+
+                </nav>
+
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+
+
+    <div id="cart-sidebar" class="cart-sidebar">
+
+
+        <header class="cart-header">
+
+
+            <h3>Your Order</h3>
+            <button class="close-btn" onclick="toggleCart()">X</button>
+
+
+        </header>
+
+        <section id="cart-items" class="cart-items-container">
+
+        </section>
+
+        <footer class="cart-footer">
+
+            <div class="cart-total-line">
+
+                <span>Total:</span>
+                <span id="cart-total">0.00</span>
+
+
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+
+
+        </footer>
+
+    </div>
+
+
+</body>
+
+</html>
