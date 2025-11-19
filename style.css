@@ -22,7 +22,8 @@ html {
 
 @font-face {
     font-family: 'Coiny';
-    src: url(Coiny-Regular.ttf) format('trutype');
+    src: url(Coiny-Regular.woff2) format('woff2');
+    src: url(Coiny-Regular.woff) format('woff');
 }
 
 .header-container img {
